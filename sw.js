@@ -7,8 +7,9 @@
 
 self.addEventListener("push", async (event) => {
   console.log("🚀 ~ self.addEventListener ~ event:", event)
-  const {title} = await event.data.json();
-  // const title = await event.data.text();
+  const title = await event.data.text();
+  const data =event.data?.json();
+  console.log("🚀 ~ self.addEventListener ~ data:", data)
   // console.log("🚀 ~ self.addEventListener ~ body:", body)
   console.log("🚀 ~ self.addEventListener ~ title:", title)
   self.registration.showNotification(title, {
