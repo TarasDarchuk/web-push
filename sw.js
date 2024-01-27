@@ -13,6 +13,6 @@ self.addEventListener("push", async (event) => {
   // console.log("🚀 ~ self.addEventListener ~ body:", body)
   console.log("🚀 ~ self.addEventListener ~ title:", title)
   self.registration.showNotification(title, {
-    // body,
+    body: 'Table 11',
   });
 });
